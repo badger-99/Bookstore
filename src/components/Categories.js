@@ -1,4 +1,4 @@
 const Categories = () => (
-  <div>Categories</div>
+  <div><h1>Categories</h1></div>
 );
 export default Categories;
