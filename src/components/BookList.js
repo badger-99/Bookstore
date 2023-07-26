@@ -1,30 +1,16 @@
 import Book from './Book';
+import { useTheme } from './BookContext';
 
-const books = [
-  {
-    title: 'The Hunger Games',
-    author: 'Suzanne Collins',
-    id: 1,
-  },
+const BookList = () => {
+  const { bookCollection } = useTheme();
 
-  {
-    title: 'Dune',
-    author: 'Frank Herbert',
-    id: 2,
-  },
+  return (
+    <div>
+      {bookCollection.map((item) => (
+        <Book key={item.id} id={item.id} author={item.author} title={item.title} />
+      ))}
+    </div>
+  );
+};
 
-  {
-    title: 'Capital in the Twenty-First Century',
-    author: 'Suzanne Collins',
-    id: 3,
-  },
-];
-
-const BookList = () => (
-  <div>
-    {books.map((book) => (
-      <Book key={book.id} author={book.author} title={book.title} />
-    ))}
-  </div>
-);
 export default BookList;
