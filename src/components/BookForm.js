@@ -9,7 +9,7 @@ const BookForm = () => {
   const [author, setAuthor] = useState('');
 
   return (
-    <form onSubmit={() => dispatch(addBook({ title, author, id: uuidv4() }))}>
+    <form>
       <input
         type="text"
         name="title"
@@ -22,7 +22,15 @@ const BookForm = () => {
         placeholder="Author"
         onChange={(e) => setAuthor(e.target.value)}
       />
-      <button type="submit">Add Book</button>
+      <button
+        type="submit"
+        onClick={(e) => {
+          e.preventDefault();
+          dispatch(addBook({ title, author, id: uuidv4() }));
+        }}
+      >
+        Add Book
+      </button>
     </form>
   );
 };
