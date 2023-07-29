@@ -1,8 +1,8 @@
 import Book from './Book';
-import { useTheme } from './BookContext';
+import { useBookContext } from './BookContext';
 
 const BookList = () => {
-  const { bookCollection, setBookCollection } = useTheme();
+  const { bookCollection, setBookCollection } = useBookContext();
 
   const handleRemove = (id) => {
     const newCollection = bookCollection.filter((book) => book.id !== id);
