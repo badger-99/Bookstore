@@ -17,28 +17,28 @@ export const getBooks = createAsyncThunk(
   },
 );
 
-const array = [
-  {
-    id: 'item1',
-    title: 'The Great Gatsby',
-    author: 'John Smith',
-    category: 'Fiction',
-  },
-  {
-    id: 'item2',
-    title: 'Anna Karenina',
-    author: 'Leo Tolstoy',
-    category: 'Fiction',
-  },
-  {
-    id: 'item3',
-    title: 'Signature In The Cell',
-    author: 'Stephen C. Meyer',
-    category: 'Nonfiction',
-  },
-];
+// const array = [
+//   {
+//     id: 'item1',
+//     title: 'The Great Gatsby',
+//     author: 'John Smith',
+//     category: 'Fiction',
+//   },
+//   {
+//     id: 'item2',
+//     title: 'Anna Karenina',
+//     author: 'Leo Tolstoy',
+//     category: 'Fiction',
+//   },
+//   {
+//     id: 'item3',
+//     title: 'Signature In The Cell',
+//     author: 'Stephen C. Meyer',
+//     category: 'Nonfiction',
+//   },
+// ];
 const initialState = {
-  bookArray: array,
+  bookArray: [],
   isLoading: false,
   error: null,
 };
@@ -65,12 +65,17 @@ const bookSlice = createSlice({
     builder
       .addCase(getBooks.pending, (state) => {
         state.isLoading = true;
+        console.log(state.isLoading);
       })
       .addCase(getBooks.fulfilled, (state, action) => {
         state.isLoading = false;
         state.bookArray = action.payload;
+        console.log(state.bookArray);
       })
-      .addCase(getBooks.rejected);
+      .addCase(getBooks.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
+      });
   },
 });
 
