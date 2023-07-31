@@ -2,7 +2,15 @@ import { useSelector } from 'react-redux';
 import Book from './Book';
 
 const BookList = () => {
-  const { bookArray } = useSelector((store) => store.book);
+  const { bookArray, isLoading, error } = useSelector((store) => store.book);
+
+  if (isLoading) {
+    return <h3>Loading...</h3>;
+  }
+
+  if (error) {
+    return <h3>{error}</h3>;
+  }
 
   return (
     <div>
