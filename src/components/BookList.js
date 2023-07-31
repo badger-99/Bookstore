@@ -12,7 +12,9 @@ const BookList = () => {
     return <h3>{error}</h3>;
   }
 
-  return (
+  return (bookArray ? (
+    <h2>Bookstore is empty.</h2>
+  ) : (
     <div>
       {bookArray.map((item) => (
         <Book
@@ -23,7 +25,7 @@ const BookList = () => {
         />
       ))}
     </div>
-  );
+  ));
 };
 
 export default BookList;
