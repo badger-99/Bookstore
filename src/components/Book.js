@@ -7,7 +7,7 @@ const Book = ({
 }) => {
   const dispatch = useDispatch();
   return (
-    <div>
+    <div id="bookCard">
       <h3>{title}</h3>
       <h5>{author}</h5>
       <button type="button" id={id} onClick={() => dispatch(removeBook(id))}>

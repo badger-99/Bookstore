@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 
 const Navigation = () => (
-  <nav>
+  <nav id="navigation">
     <h1>Bookstore CMS</h1>
     <ul>
       <li>
