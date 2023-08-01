@@ -8,6 +8,15 @@ const BookForm = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
 
+  const newBook = {
+    item_id: uuidv4(),
+    title,
+    author,
+    category: 'book',
+  };
+
+  // wVuhDZngzRqOjmOnw2vm
+
   return (
     <form>
       <input
@@ -26,7 +35,7 @@ const BookForm = () => {
         type="submit"
         onClick={(e) => {
           e.preventDefault();
-          dispatch(addBook({ title, author, id: uuidv4() }));
+          dispatch(addBook(newBook));
         }}
       >
         Add Book
