@@ -29,23 +29,30 @@ export const addBook = createAsyncThunk(
   },
 );
 
+export const removeBook = createAsyncThunk('books/removeBook', async (endPoint, thunkAPI) => {
+  console.log(endPoint);
+  const removeURL = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/mqojsesd5RNXmiD5UXBK/books/${endPoint}`;
+  try {
+    const response = await axios.delete(removeURL);
+    return response;
+  } catch (error) {
+    const errorMsg = `${error.code}: ${error.message}`;
+    return thunkAPI.rejectWithValue(errorMsg);
+  }
+});
+
 const initialState = {
   bookArray: [],
   isLoading: false,
   error: null,
-  resp: null,
+  added: null,
+  removed: null,
 };
 
 const bookSlice = createSlice({
   name: 'bookList',
   initialState,
-  reducers: {
-    removeBook: (store, action) => {
-      const bookId = action.payload;
-      const newBookArray = store.bookArray.filter((book) => book.id !== bookId);
-      store.bookArray = newBookArray;
-    },
-  },
+  reducers: { },
   extraReducers: (builder) => {
     builder
       .addCase(getBooks.pending, (state) => {
@@ -60,19 +67,30 @@ const bookSlice = createSlice({
         state.error = action.payload;
       })
       .addCase(addBook.pending, (state) => {
-        state.resp = 'sending...';
-        console.log(state.resp);
+        state.added = 'sending...';
+        console.log(state.added);
       })
       .addCase(addBook.fulfilled, (state, action) => {
-        state.resp = action.payload.data;
-        console.log(state.resp);
+        state.added = action.payload.data;
+        console.log(state.added);
       })
       .addCase(addBook.rejected, (state, action) => {
-        state.resp = action.payload.data;
-        console.log(state.resp);
+        state.added = action.payload.data;
+        console.log(state.added);
+      })
+      .addCase(removeBook.pending, (state) => {
+        state.removed = 'sending...';
+        console.log(state.added);
+      })
+      .addCase(removeBook.fulfilled, (state, action) => {
+        state.removed = action.payload.data;
+        console.log(state.removed);
+      })
+      .addCase(removeBook.rejected, (state, action) => {
+        state.removed = action.payload.data;
+        console.log(state.removed);
       });
   },
 });
 
-export const { removeBook } = bookSlice.actions;
 export default bookSlice.reducer;
