@@ -23,12 +23,14 @@ const BookForm = () => {
         type="text"
         name="title"
         placeholder="Title"
+        value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
       <input
         type="text"
         name="author"
         placeholder="Author"
+        value={author}
         onChange={(e) => setAuthor(e.target.value)}
       />
       <button
@@ -36,6 +38,8 @@ const BookForm = () => {
         onClick={(e) => {
           e.preventDefault();
           dispatch(addBook(newBook));
+          setTitle('');
+          setAuthor('');
         }}
       >
         Add Book
