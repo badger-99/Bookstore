@@ -21,7 +21,7 @@ export const addBook = createAsyncThunk(
   async (newBook, thunkAPI) => {
     try {
       const response = await axios.post(url, newBook);
-      return response;
+      return response.data;
     } catch (error) {
       const errorMsg = `${error.code}: ${error.message}`;
       return thunkAPI.rejectWithValue(errorMsg);
@@ -34,7 +34,7 @@ export const removeBook = createAsyncThunk('books/removeBook', async (endPoint, 
   const removeURL = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/mqojsesd5RNXmiD5UXBK/books/${endPoint}`;
   try {
     const response = await axios.delete(removeURL);
-    return response;
+    return response.data;
   } catch (error) {
     const errorMsg = `${error.code}: ${error.message}`;
     return thunkAPI.rejectWithValue(errorMsg);
