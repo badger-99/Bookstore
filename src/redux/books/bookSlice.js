@@ -31,7 +31,6 @@ export const addBook = createAsyncThunk(
 );
 
 export const removeBook = createAsyncThunk('books/removeBook', async (endPoint, thunkAPI) => {
-  console.log(endPoint);
   const removeURL = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/mqojsesd5RNXmiD5UXBK/books/${endPoint}`;
   try {
     const response = await axios.delete(removeURL);
