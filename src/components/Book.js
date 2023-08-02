@@ -7,9 +7,12 @@ const Book = ({
 }) => {
   const dispatch = useDispatch();
   return (
-    <div id="bookCard">
-      <h3>{title}</h3>
-      <h5>{author}</h5>
+    <div className="bookCard">
+      <div className="bookDetails">
+        <span className="Text-Style-9 category">Book</span>
+        <span className="Text-Style-5">{title}</span>
+        <span className="Text-Style-8">{author}</span>
+      </div>
       <button type="button" id={id} onClick={() => dispatch(removeBook(id))}>
         Remove
       </button>

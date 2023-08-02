@@ -53,7 +53,7 @@
   color: #0290ff;
 }
 
-#bookCard {
+.bookCard {
   /* width: 75rem; */
   height: 10.625rem;
   margin: 2.313rem 6.25rem 0;
@@ -61,6 +61,12 @@
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: #fff;
+}
+
+.bookDetails{
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0 1.313rem;
 }
 
 #bookForm {
