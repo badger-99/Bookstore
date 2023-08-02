@@ -1,23 +1,60 @@
 #main {
-  width: 87.5rem;
-  margin: 0 2.5rem 0;
+  width: 80%;
+  margin: 0 auto;
+  /* margin: 0 2.5rem 0; */
   padding: 0 0 10rem;
   border-radius: 4px;
   box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
   background-color: #fafafa;
-  border: 1px solid black;
 }
 
 #navigation {
-  width: 87.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2.375rem;
+  /* width: 100%; */
   height: 5.938rem;
   margin: 0 0 2.375rem;
   padding: 1.438rem 6.188rem 1.688rem 6.25rem;
   background-color: #fff;
+  border-bottom: solid 1px #e8e8e8;
+}
+
+#navigation > ul {
+  display: flex;
+  flex-direction: row;
+  gap: 2.563rem;
+  padding: 0;
+}
+
+#navigation li {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  opacity: 0.5;
+}
+.active {
+  opacity: 1;
+}
+
+#userIcon {
+  border: solid 1px #e8e8e8;
+  margin-left: auto;
+  padding: 0.875rem;
+  border-radius: 50%;
+}
+
+#userIcon svg {
+  width: 1.7rem;
+  height: 1.7rem;
+  color: #0290ff;
 }
 
 #bookCard {
-  width: 75rem;
+  /* width: 75rem; */
   height: 10.625rem;
   margin: 2.313rem 6.25rem 0;
   padding: 2rem 9.188rem 1.625rem 1.688rem;
@@ -26,6 +63,6 @@
   background-color: #fff;
 }
 
-#bookForm{
+#bookForm {
   margin: 2.313rem 6.25rem 0;
 }
