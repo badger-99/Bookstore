@@ -8,9 +8,17 @@
   background-color: #fafafa;
 }
 
-#navigation {
+.row {
   display: flex;
   flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation {
   align-items: center;
   gap: 2.375rem;
   /* width: 100%; */
@@ -21,18 +29,17 @@
   border-bottom: solid 1px #e8e8e8;
 }
 
-#navigation > ul {
-  display: flex;
-  flex-direction: row;
+.navigation > ul {
   gap: 2.563rem;
   padding: 0;
 }
 
-#navigation li {
+.navigation li {
   list-style: none;
 }
 
-.link {
+.link,
+.pale {
   text-decoration: none;
   opacity: 0.5;
 }
@@ -54,6 +61,8 @@
 }
 
 .bookCard {
+  justify-content: space-between;
+  align-items: center;
   /* width: 75rem; */
   height: 10.625rem;
   margin: 2.313rem 6.25rem 0;
@@ -64,8 +73,6 @@
 }
 
 .bookDetails {
-  display: flex;
-  flex-direction: column;
   margin: 2rem 0 1.313rem;
 }
 
@@ -75,9 +82,22 @@
   margin: 0.188rem 0.938rem 0.125rem 0;
 }
 
-.buttons button:nth-child(-n + 2){
+.buttons button:nth-child(-n + 2) {
   border-right: solid 1px #e8e8e8;
   padding-right: 0.938rem;
+}
+
+.stats {
+  gap: 0.688rem;
+  align-items: center;
+  padding-right: 4.938rem;
+  border-right: solid 1px #e8e8e8;
+}
+
+.progres {
+  width: 4.7rem;
+  height: 4.7rem;
+  padding: 0.62rem;
 }
 
 #bookForm {
