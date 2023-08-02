@@ -63,10 +63,21 @@
   background-color: #fff;
 }
 
-.bookDetails{
+.bookDetails {
   display: flex;
   flex-direction: column;
   margin: 2rem 0 1.313rem;
+}
+
+.buttons button {
+  border: none;
+  background: none;
+  margin: 0.188rem 0.938rem 0.125rem 0;
+}
+
+.buttons button:nth-child(-n + 2){
+  border-right: solid 1px #e8e8e8;
+  padding-right: 0.938rem;
 }
 
 #bookForm {

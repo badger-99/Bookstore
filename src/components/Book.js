@@ -13,9 +13,13 @@ const Book = ({
         <span className="Text-Style-5">{title}</span>
         <span className="Text-Style-8">{author}</span>
       </div>
-      <button type="button" id={id} onClick={() => dispatch(removeBook(id))}>
-        Remove
-      </button>
+      <div className="buttons">
+        <button type="button" className="Text-Style-8">Comments</button>
+        <button type="button" id={id} onClick={() => dispatch(removeBook(id))} className="Text-Style-8">
+          Remove
+        </button>
+        <button type="button" className="Text-Style-8">Edit</button>
+      </div>
     </div>
   );
 };
