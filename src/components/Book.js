@@ -40,7 +40,7 @@ const Book = ({
         </div>
         <div className="overview column">
           <span className="Text-Style-7 pale">CURRENT CHAPTER</span>
-          <span className="Text-Style-4">Chapter 1</span>
+          <span className="Text-Style-4">Chapter 19</span>
           <button type="button" className="Text-Style-11">UPDATE PROGRESS</button>
         </div>
       </div>

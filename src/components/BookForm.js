@@ -18,12 +18,14 @@ const BookForm = () => {
   // wVuhDZngzRqOjmOnw2vm
 
   return (
-    <section id="bookForm">
+    <section id="bookForm" className="Text-Style-12 column">
       <span>ADD NEW BOOK</span>
-      <form id="form">
+      <form id="form" className="row">
         <input
           type="text"
           name="title"
+          id="titleInput"
+          className="Text-Style-13"
           placeholder="Title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
@@ -31,12 +33,15 @@ const BookForm = () => {
         <input
           type="text"
           name="author"
+          id="authorInput"
+          className="Text-Style-13"
           placeholder="Author"
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
         />
         <button
           type="submit"
+          id="submit"
           onClick={(e) => {
             e.preventDefault();
             dispatch(addBook(newBook));
