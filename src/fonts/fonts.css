@@ -17,8 +17,9 @@
  */
 
 @font-face {
-  font-family: Montserrat;
-  src: local(Montserrat-Regular),
+  font-family: Montserrat, sans-serif;
+  src:
+    local(montserrat-regular),
     url("./Montserrat-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -26,8 +27,9 @@
 }
 
 @font-face {
-  font-family: Montserrat;
-  src: local(Montserrat-Bold),
+  font-family: Montserrat, sans-serif;
+  src:
+    local(montserrat-bold),
     url("./Montserrat-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
@@ -35,8 +37,9 @@
 }
 
 @font-face {
-  font-family: RobotoSlab;
-  src: local(RobotoSlab-Light),
+  font-family: RobotoSlab, serif;
+  src:
+    local(robotoslab-light),
     url("./RobotoSlab-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
@@ -44,8 +47,9 @@
 }
 
 @font-face {
-  font-family: RobotoSlab;
-  src: local(RobotoSlab-Bold),
+  font-family: RobotoSlab, serif;
+  src:
+    local(robotoslab-bold),
     url("./RobotoSlab-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
@@ -53,7 +57,7 @@
 }
 
 .Text-Style-10 {
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 2rem;
   font-weight: normal;
   font-stretch: normal;
@@ -64,7 +68,7 @@
 }
 
 .Text-Style-3 {
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 1.875rem;
   font-weight: bold;
   font-stretch: normal;
@@ -75,7 +79,7 @@
 }
 
 .Text-Style-5 {
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, serif;
   font-size: 1.375rem;
   font-weight: bold;
   font-stretch: normal;
@@ -86,7 +90,7 @@
 }
 
 .Text-Style-12 {
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 1.25rem;
   font-weight: bold;
   font-stretch: normal;
@@ -97,7 +101,7 @@
 }
 
 .Text-Style-13 {
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 1rem;
   font-weight: normal;
   font-stretch: normal;
@@ -108,7 +112,7 @@
 }
 
 .Text-Style-4 {
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, serif;
   font-size: 1rem;
   font-weight: 300;
   font-stretch: normal;
@@ -119,7 +123,7 @@
 }
 
 .Text-Style-9 {
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 0.875rem;
   font-weight: bold;
   font-stretch: normal;
@@ -130,7 +134,7 @@
 }
 
 .Text-Style-2 {
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 0.875rem;
   font-weight: normal;
   font-stretch: normal;
@@ -141,7 +145,7 @@
 }
 
 .Text-Style-8 {
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, serif;
   font-size: 0.875rem;
   font-weight: 300;
   font-stretch: normal;
@@ -152,7 +156,7 @@
 }
 
 .Text-Style {
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, serif;
   font-size: 0.813rem;
   font-weight: bold;
   font-stretch: normal;
@@ -164,7 +168,7 @@
 }
 
 .Text-Style-6 {
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 0.813rem;
   font-weight: normal;
   font-stretch: normal;
@@ -175,7 +179,7 @@
 }
 
 .Text-Style-11 {
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, serif;
   font-size: 0.813rem;
   font-weight: 300;
   font-stretch: normal;
@@ -187,7 +191,7 @@
 }
 
 .Text-Style-7 {
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, serif;
   font-size: 0.813rem;
   font-weight: 300;
   font-stretch: normal;
