@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import { ImUser } from 'react-icons/im';
 
 const Navigation = () => (
   <nav id="navigation">
@@ -11,6 +12,9 @@ const Navigation = () => (
         <NavLink className="link" to="/categories">Categories</NavLink>
       </li>
     </ul>
+    <span id="userIcon">
+      <ImUser />
+    </span>
   </nav>
 );
 export default Navigation;
