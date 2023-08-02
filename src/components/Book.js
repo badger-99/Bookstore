@@ -38,6 +38,11 @@ const Book = ({
           <span className="Text-Style-10">68%</span>
           <span className="Text-Style-2 pale">Completed</span>
         </div>
+        <div className="overview column">
+          <span className="Text-Style-7 pale">CURRENT CHAPTER</span>
+          <span className="Text-Style-4">Chapter 1</span>
+          <button type="button" className="Text-Style-11">UPDATE PROGRESS</button>
+        </div>
       </div>
     </div>
   );

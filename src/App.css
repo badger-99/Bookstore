@@ -1,11 +1,11 @@
 #main {
-  width: 80%;
   margin: 0 auto;
   /* margin: 0 2.5rem 0; */
-  padding: 0 0 10rem;
+  padding-bottom: 10rem;
   border-radius: 4px;
-  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
   background-color: #fafafa;
+  border: 1px red solid;
+  overflow-x: auto;
 }
 
 .row {
@@ -21,7 +21,6 @@
 .navigation {
   align-items: center;
   gap: 2.375rem;
-  /* width: 100%; */
   height: 5.938rem;
   margin: 0 0 2.375rem;
   padding: 1.438rem 6.188rem 1.688rem 6.25rem;
@@ -63,9 +62,9 @@
 .bookCard {
   justify-content: space-between;
   align-items: center;
-  /* width: 75rem; */
   height: 10.625rem;
-  margin: 2.313rem 6.25rem 0;
+  max-width: 80%;
+  margin: 2.313rem auto 0;
   padding: 2rem 9.188rem 1.625rem 1.688rem;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
@@ -90,14 +89,29 @@
 .stats {
   gap: 0.688rem;
   align-items: center;
-  padding-right: 4.938rem;
-  border-right: solid 1px #e8e8e8;
 }
 
 .progres {
   width: 4.7rem;
   height: 4.7rem;
   padding: 0.62rem;
+}
+
+.numbers{
+  padding-right: 4.938rem;
+  border-right: solid 1px #e8e8e8;
+  margin-right: 3.688rem;
+}
+
+.overview button {
+  width: 11.5rem;
+  height: 2.063rem;
+  margin-top: 1.438rem;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border: none;
+  border-radius: 3px;
+  background-color: #0290ff;
+  color: #fff;
 }
 
 #bookForm {
